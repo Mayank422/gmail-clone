@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gmail Clone (Static)</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;700" rel="stylesheet" />
+
+  <link rel="stylesheet" href="gmail.css" />
+</head>
+<body>
+  <!-- App container -->
+  <div class="app">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="left">
+        <button class="icon-btn" aria-label="Main menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+        <div class="brand">
+          <span class="material-symbols-outlined brand-icon">mail</span>
+          <span class="brand-text">Gmail</span>
+        </div>
+      </div>
+
+      <div class="search">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" placeholder="Search mail" />
+        <button class="icon-btn" aria-label="Search options"><span class="material-symbols-outlined">tune</span></button>
+      </div>
+
+      <div class="right">
+        <button class="icon-btn" aria-label="Help"><span class="material-symbols-outlined">help</span></button>
+        <button class="icon-btn" aria-label="Support"><span class="material-symbols-outlined">info</span></button>
+        <button class="icon-btn" aria-label="Settings"><span class="material-symbols-outlined">settings</span></button>
+        <button class="icon-btn" aria-label="Apps"><span class="material-symbols-outlined">apps</span></button>
+        <div class="avatar" title="Account"></div>
+      </div>
+    </header>
+
+    <!-- Layout columns -->
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="compose">
+          <span class="material-symbols-outlined">edit</span>
+          Compose
+        </button>
+
+        <nav class="nav">
+          <a class="nav-item active" href="#">
+            <span class="material-symbols-outlined">inbox</span>
+            <span>Inbox</span>
+            <span class="badge">3</span>
+          </a>
+          <a class="nav-item" href="#"><span class="material-symbols-outlined">star</span><span>Starred</span></a>
+          <a class="nav-item" href="#"><span class="material-symbols-outlined">label_important</span><span>Important</span></a>
+          <a class="nav-item" href="#"><span class="material-symbols-outlined">send</span><span>Sent</span></a>
+          <a class="nav-item" href="#"><span class="material-symbols-outlined">draft</span><span>Drafts</span></a>
+          <a class="nav-item" href="#"><span class="material-symbols-outlined">sell</span><span>Categories</span></a>
+          <a class="nav-item" href="#"><span class="material-symbols-outlined">expand_more</span><span>More</span></a>
+        </nav>
+
+        <div class="labels-header">
+          <span>Labels</span>
+          <button class="icon-btn small" aria-label="Add label"><span class="material-symbols-outlined">add</span></button>
+        </div>
+
+        <nav class="labels">
+          <a class="nav-item" href="#"><span class="material-symbols-outlined">description</span><span>Documents</span></a>
+          <a class="nav-item" href="#"><span class="material-symbols-outlined">verified</span><span>Official</span></a>
+        </nav>
+
+        <div class="storage">
+          <div class="bar"><span style="width:79%"></span></div>
+          <div class="storage-meta">
+            <span>79% of 15 GB used</span>
+            <button class="link-like">Manage</button>
+          </div>
+          <button class="upgrade">
+            <span class="material-symbols-outlined">workspace_premium</span>
+            Upgrade
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main inbox -->
+      <main class="inbox">
+        <div class="inbox-toolbar">
+          <div class="left">
+            <label class="checkbox">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <button class="icon-btn" aria-label="Select"><span class="material-symbols-outlined">expand_more</span></button>
+            <button class="icon-btn" aria-label="Refresh"><span class="material-symbols-outlined">refresh</span></button>
+            <button class="icon-btn" aria-label="More"><span class="material-symbols-outlined">more_vert</span></button>
+          </div>
+          <div class="right">
+            <span class="range">1–50 of 2,345</span>
+            <button class="icon-btn" aria-label="Older"><span class="material-symbols-outlined">chevron_left</span></button>
+            <button class="icon-btn" aria-label="Newer"><span class="material-symbols-outlined">chevron_right</span></button>
+          </div>
+        </div>
+
+        <!-- Sections -->
+        <section class="section">
+          <button class="section-toggle">
+            <span class="material-symbols-outlined">expand_less</span>
+            Unread
+          </button>
+          <div class="card empty">
+            <p>Woohoo! You've read all the messages in your inbox.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <button class="section-toggle">
+            <span class="material-symbols-outlined">expand_less</span>
+            Everything else
+          </button>
+
+          
+          <article class="row">
+            <div class="row-left">
+              <label class="checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <button class="icon-star" aria-label="Star">
+                <span class="material-symbols-outlined">star</span>
+              </button>
+              <span class="sender">Figma</span>
+            </div>
+            <div class="row-mid">
+              <span class="subject">Weekly design digest</span>
+              <span class="snippet">— New auto-layout updates and community files to try...</span>
+            </div>
+            <div class="row-right">
+              <span class="time">10:42 AM</span>
+              <button class="icon-btn subtle"><span class="material-symbols-outlined">more_vert</span></button>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="row-left">
+              <label class="checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <button class="icon-star" aria-label="Star">
+                <span class="material-symbols-outlined">star</span>
+              </button>
+              <span class="sender">GitHub</span>
+            </div>
+            <div class="row-mid">
+              <span class="subject">Security alert for repository</span>
+              <span class="snippet">— Dependabot found 1 vulnerability that needs your attention...</span>
+            </div>
+            <div class="row-right">
+              <span class="time">9:05 AM</span>
+              <button class="icon-btn subtle"><span class="material-symbols-outlined">more_vert</span></button>
+            </div>
+          </article>
+
+          <article class="row">
+            <div class="row-left">
+              <label class="checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <button class="icon-star" aria-label="Star">
+                <span class="material-symbols-outlined">star</span>
+              </button>
+              <span class="sender">Google</span>
+            </div>
+            <div class="row-mid">
+              <span class="subject">Your account activity</span>
+              <span class="snippet">— We noticed a new sign-in to your Google Account...</span>
+            </div>
+            <div class="row-right">
+              <span class="time">Yesterday</span>
+              <button class="icon-btn subtle"><span class="material-symbols-outlined">more_vert</span></button>
+            </div>
+          </article>
+
+          <div class="footer-note">
+            <span>Terms · Privacy · Program Policies</span>
+            <span class="spacer"></span>
+            <span>Last account activity: 31 minutes ago</span>
+            <a href="#" class="link-like">Details</a>
+          </div>
+        </section>
+      </main>
+
+      <!-- Right rail -->
+      <aside class="right-rail">
+        <button class="rail-btn" title="Calendar"><span class="material-symbols-outlined">calendar_today</span></button>
+        <button class="rail-btn" title="Keep"><span class="material-symbols-outlined">lightbulb</span></button>
+        <button class="rail-btn" title="Tasks"><span class="material-symbols-outlined">check_circle</span></button>
+        <button class="rail-btn" title="Contacts"><span class="material-symbols-outlined">account_circle</span></button>
+        <div class="rail-divider"></div>
+        <button class="rail-btn" title="Get Add-ons"><span class="material-symbols-outlined">add</span></button>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
